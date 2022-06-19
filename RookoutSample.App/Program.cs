@@ -27,7 +27,7 @@ namespace RookoutSample.App
       
       while (true)
       {
-        Console.Write("What do you want an answer for? (Enter 'Q' to quit)");
+        Console.Write("What do you want an answer for? (Enter 'Q' to quit): ");
         var reason = Console.ReadLine();
 
         if (reason.Equals("Q", StringComparison.OrdinalIgnoreCase))
