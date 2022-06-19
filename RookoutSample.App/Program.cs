@@ -23,9 +23,20 @@ namespace RookoutSample.App
       Rook.API.Start(options);
 
       Console.WriteLine("Hi there!");
-      Console.WriteLine("Press any key to quit");
+      var foo = new Foo(config, new Bar());
+      
+      while (true)
+      {
+        Console.Write("What do you want an answer for? (Enter 'Q' to quit)");
+        var reason = Console.ReadLine();
 
-      Console.ReadKey();
+        if (reason.Equals("Q", StringComparison.OrdinalIgnoreCase))
+        {
+          break;
+        }
+
+        Console.WriteLine($"Mhh... maybe the answer to {reason} is {foo.Run(reason)}");
+      } 
     }
   }
 }
